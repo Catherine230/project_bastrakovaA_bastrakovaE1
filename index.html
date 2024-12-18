@@ -7,14 +7,16 @@
 </head>
 <body>
      <!-- Заголовок -->
-    <header>
+    <header class="header">
         <!-- Логотип -->
-        <img src="images/logo sam.png" alt="Логотип" width="50" height="50"> <p ALIGN = "center"><h1 class="centered-text"> Туризм, название</h1></p>
-        <!--/ Логотип -->
+        <a class="header__logo">
+            <img class="header__logo-icon" src="images/logo sam.png" alt="Логотип" width="50" height="50"> <p ALIGN = "center"><h1 class="centered-text"> Туризм, название</h1></p>
+        </a>
+            <!--/ Логотип -->
 
         <!-- Язык -->
         <div class="container">
-            <select id="languageSelect">
+            <select class="container__languageSelect">
                 <option value="ru">Русский</option>
                 <option value="en">English</option>
             </select>
@@ -22,218 +24,167 @@
         <!--/ Язык -->
 
         <!--Форма поиска -->
-        <form action="/" method="get">
-            <img src="images/poisk roz.png" alt="Логотип" width="30" height="30">
-            <input type="search" name="text" placeholder="Поиск по сайту">
-            <input type="submit" value="Поиск">
+        <form class="search" action="/" method="get">
+            <img class="search__icon"src="images/poisk roz.png" alt="Логотип" width="30" height="30">
+            <input class="search__text" type="search" name="text" placeholder="Поиск по сайту">
+            <input  class="search__poisk" type="submit" value="Поиск">
         </form>
         <!--/Форма поиска -->
-
         <!-- Навигация -->
-        <nav>
-            <ul>
-                <li><a href="#about">О нас</a> <a href="#destinations">Направления</a> <a href="#tipturisma">Тип туризма</a> <a href="#otzyve">Отзывы</a>  <a href="#sobytia">События</a> <a href="#contact">Контакты</a></li>
+        <nav class="header__nav">
+            <ul class=" header__list">
+                <li class="header__item"><a class="header__item-link header__item-link--active">Главная</a></li>    
+                <li class="header__item"><a class="header__item-link" href="#tipturisma">Тип туризма</a></li>
+                <li class="header__item"><a class="header__item-link" href="#destinations">Направления</a> </li> 
+                <li class="header__item"><a class="header__item-link" href="#sobytia">События</a></li>
+                <li class="header__item"><a class="header__item-link" href="#about">О нас</a></li> 
             </ul>
         </nav>
         <!--/ Навигация -->
+       
     </header>
     <!--/ Заголовок -->
     <!--Основной контент -->
-    <main>
+    <main class="container">
         <!--Первый экран -->
-        <h1>Добро пожаловать в мир туризма!</h1>
-        <section id="about">
-           <div>
-            <h2>О нас</h2>
-            <p>Мы - команда профессионалов, готовые поделиться информацией о путешествиях по нашей стране.</p>
-        </div>
-        <video src="" alt="Видео красот" width="300" height="500"></video>
+        <h1 class="container__title">Добро пожаловать в мир туризма!</h1>
+        <section class="section__item-about">
+           <div class="promo__content">
+                <h2 class="promo__title section__title">О нас</h2>
+                <p class="promo__description">Если вы любите путешествовать, то наш сайт вам точно поможет узнать Россию с туристической стороны.</p>
+            </div>
+        <img class="promo__img" src="images/promo.jpg" alt="Фото красот" width="500" height="200"></img>
         </section>
          <!--/Первый экран -->
          <!--Виды туризма -->
-        <section id="tipturisma">
-            <h2>Виды туризма</h2>
-            <ul>
-                <div>
-                    <li>
-                        <img src="" alt="По достопримечательностям" width="100" height="100">
-                        <h3>По достопримечательностям</h3>
-                        <p>Описание</p>
+        <section class= "section__tipturisma">
+            <h2 class="section__title">Виды туризма</h2>
+            <div class="section__all"> 
+                <img class="arrows__img" src="images/strelka 2.png" alt="Стрелка" width="25" height="25">
+                <img class="arows__img" src="images/strelka.png" alt="Стрелка" width="25" height="25">
+            </div>
+            <ul class="cards__tur">
+                    <li class="card__sights">
+                        <img class="card__img" src="images/dostoprim.jpg" alt="По достопримечательностям" width="100" height="150">
+                        <h3 class="card__title">По достопримечательностям</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="По чудесам природы" width="100" height="100">
-                        <h3>По чудесам природы</h3>
-                        <p>Описание</p>
+                    <li class="card__nature">
+                        <img class="card__img" src="images/By the wonders of nature.jpg" alt="По чудесам природы" width="100" height="150">
+                        <h3 class="card__title">По чудесам природы</h3>
+                        <p class="card__description" >Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Семейный отдых" width="100" height="100">
-                        <h3>Семейный отдых</h3>
-                        <p>Описание</p>
+                    <li class="card__family"> 
+                        <img class="card__img" src="images/Family holidays.jpg" alt="Семейный отдых" width="100" height="150">
+                        <h3 class="card__title">Семейный отдых</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Экотуризм" width="100" height="100">
-                        <h3>Экотуризм</h3>
-                        <p>Описание</p>
+                    <li class="card__eco">
+                        <img class="card__img" src="images/Ecotourism.jpg" alt="Экотуризм" width="100" height="150">
+                        <h3 class="card__title">Экотуризм</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Культурные и гастрономические туры" width="100" height="100">
-                        <h3>Культурные и гастрономические туры</h3>
-                        <p>Описание</p>
+                    <li class="card__culture">
+                        <img class="card__img" src="images/Cultural and gastronomic tours.jpg" alt="Культурные и гастрономические туры" width="100" height="150">
+                        <h3 class="card__title">Культурные и гастрономические туры</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Оздоровительные поездки" width="100" height="100">
-                        <h3>Оздоровительные поездки</h3>
-                        <p>Описание</p>
+                    <li class="card__health">
+                        <img class="card__img" src="images/Wellness trips.jpg" alt="Оздоровительные поездки" width="100" height="150">
+                        <h3 class="card__title">Оздоровительные поездки</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                </div>
             </ul>
         </section>
         <!--/Виды туризма -->
         <!--Направления -->
-         <section id="destinations">
-            <h2>Популярные направления</h2>
-            <ul>
-                <div>
-                    <li>
-                        <img src="" alt="Северо-запад" width="100" height="100">
-                        <h3>Северо-Запад</h3>
-                        <p>Описание</p>
+         <section class= "section__napravlenia">
+            <h2 class="section__title">Популярные направления</h2>
+            <div class="section__all"> 
+                <img class="arrows__img" src="images/strelka 2.png" alt="Стрелка" width="25" height="25">
+                <img class="arows__img" src="images/strelka.png" alt="Стрелка" width="25" height="25">
+            </div>
+            <ul class="cards__nap">
+                    <li class="card__NW">
+                        <img class="card__img-nap" src="images/Northwest.jpg" alt="Северо-запад" width="100" height="100">
+                        <h3 class="card__title">Северо-Запад</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Центральный" width="100" height="100">
-                        <h3>Центральный</h3>
-                        <p>Описание</p>
+                    <li class="card__centr">
+                        <img class="card__img-nap" src="images/Central.jpg" alt="Центральный" width="100" height="100">
+                        <h3 class="card__title">Центральный</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Южный" width="100" height="100">
-                        <h3>Южный</h3>
-                        <p>Описание</p>
+                    <li class="card__S">
+                        <img class="card__img-nap" src="images/South.jpg" alt="Южный" width="100" height="100">
+                        <h3 class="card__title">Южный</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Урал" width="100" height="100">
-                        <h3>Урал</h3>
-                        <p>Описание</p>
+                    <li class="card__Ural">
+                        <img class="card__img-nap" src="images/ural.jpg" alt="Урал" width="100" height="100">
+                        <h3 class="card__title">Урал</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Сибирь" width="100" height="100">
-                        <h3>Сибирь</h3>
-                        <p>Описание</p>
+                    <li class="card__Sibir">
+                        <img class="card__img-nap" src="images/Siberia.jpg" alt="Сибирь" width="100" height="100">
+                        <h3 class="card__title">Сибирь</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Дальний-Восток" width="100" height="100">
-                        <h3>Дальний-Восток</h3>
-                        <p>Описание</p>
+                    <li class="card__DE">
+                        <img class="card__img-nap" src="images/Far East.jpg" alt="Дальний-Восток" width="100" height="100">
+                        <h3 class="card__title">Дальний-Восток</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                    <li>
-                        <img src="" alt="Кавказ" width="100" height="100">
-                        <h3>Кавказ</h3>
-                        <p>Описание</p>
+                    <li class="card__Kavkaz"> 
+                        <img class="card__img-nap" src="images/Caucasus.jpg" alt="Кавказ" width="100" height="100">
+                        <h3 class="card__title">Кавказ</h3>
+                        <p class="card__description">Описание</p>
                     </li>
-                </div>
-            </ul>
+                </ul>
         </section>
         <!--/Направления -->
-       
-        <!--Отзывы -->
-        <section id="otzyve">
-            <h2>Ознакомьтесь с отзывами путешественников</h2>
-        </section>
-        <!--/Отзывы -->
 
         <!--События -->
-        <section id="sobytia">
-            <h2>Исследуйте по-другому</h2>
-            <div> 
-                <a href="" target="_blank"> Показать все</a>
-                <img scr="" alt="Стрелка" width="100" height="100">
+        <section class= "section__events">
+            <h2 class="section__title">Исследуйте по-другому</h2>
+            <div class="section__all"> 
+                <img class="arrows__img" src="images/strelka 2.png" alt="Стрелка" width="25" height="25">
+                <img class="arows__img" src="images/strelka.png" alt="Стрелка" width="25" height="25">
             </div>
-            <div>
-                <li>
-                    <img src="" alt="Новый год в..." width="100" height="100">
-                    <h3>Новый год в...</h3>
-                    <p>Краткая информация</p>
+            <div class="card_sobytia">
+                <li class="card__NY">
+                    <img class="card__img-sob" src="images/NewYear Moscow.jpg" alt="Новый год в..." width="100" height="150">
+                    <h3 class="card__title">Новый год в Москве</h3>
+                    <p class="card__description">Куда сходить туристу в новогодние каникулы</p>
                 </li>
-                <li>
-                    <img src="" alt="Название" width="100" height="100">
-                    <h3>Название</h3>
-                    <p>Краткая информация</p>
+                <li class="card__auto">
+                    <img class="card__img-sob" src="images/auto.jpg" alt="Название" width="100" height="150">
+                    <h3 class="card__title">Автотуризм</h3>
+                    <p class="card__description">По России на машине</p>
                 </li>
-                <li>
-                    <img src="" alt="Название" width="100" height="100">
-                    <h3>Название</h3>
-                    <p>Краткая информация</p>
+                <li class="card__cruise">
+                    <img class="card__img-sob" src="images/cruise.jpg" alt="Название" width="150" height="100">
+                    <h3 class="card__title">Круиз</h3>
+                    <p class="card__description">Маршруты круизов по России</p>
                 </li>
             </div>
         </section>
         <!--/События -->
-        
-        <!--Контакты -->
-        <section id="contact">
-            <h2>Контакты</h2>
-            <a href="mailto:bastrakova.aleksandru@mail.ru">Свяжитесь с нами по электронной почте:</a>
-            <p> </p>
-        </section>
-        <!--/Контакты -->
+       
 
-        <section>
-            <a href= >Наверх</a>
+        <section class="section__up">
+            <a class="section__up-icon" href= >Наверх</a>
         </section>
     </main>
-    <footer> 
-    <!--Подвал -->
-    <!-- Формы -->
-    <div>
-        <!-- Форма "Войдите в профиль" -->
-        <section>
-            <button type="button"><img src="images/krestik.png" alt="Закрыть окно" width="24" height="24"></button>
-            <h2>Войдите в профиль</h2>
-            <p>Оставлять отзывы могут только зарегистрированные пользователи</p>
-            <div>
-                <button type="button">Войти</button>
-                <button type="button">Регистрация</button>
-            </div>
-        </section>
-        <!--/ Форма "Войдите в профиль" -->
-        <!-- Форма "Регистрация" -->
-        <section>
-            <button type="button"><img src="images/krestik.png" alt="Закрыть окно" width="24" height="24"></button>
-            <h2>Регистрация</h2>
-            <form action="/" method="post">
-                <input type="text" name="name" placeholder="Имя" required>
-                <input type="email" name="email" placeholder="Логин" required>
-                <fieldset>
-                    <div>
-                        <input type="password" name="password" placeholder="Пароль" required>
-                        <span>Минимум 8 символов</span>
-                    </div>
-                    <input type="password" name="repeat-password" placeholder="Повторите пароль" required>
-                </fieldset>
-                <fieldset>
-                    <input type="submit" value="Зарегистрироваться">
-                    <button type="button">Отмена</button>
-                </fieldset>
-                <button type="button">У меня уже есть аккаунт</button>
-            </form>
-        </section>
-        <!--/ Форма "Регистрация" -->
-        <!-- Форма "Войти" -->
-        <section>
-            <button type="button"><img src="images/krestik.png" alt="Закрыть окно" width="24" height="24"></button>
-            <h2>Войти</h2>
-            <form action="/" method="post">
-                <input type="email" name="email" placeholder="Логин" required>
-                <input type="password" name="password" placeholder="Пароль" required>
-                <fieldset>
-                    <input type="submit" value="Войти">
-                    <button type="button">Отмена</button>
-                </fieldset>
-                <button type="button">У меня еще нет аккаунта</button>
-            </form>
-        </section>
-        <!--/ Форма "Войти" -->
-    </div>
-    <!--/ Формы -->
-    
+     <!--Подвал -->
+    <footer class="footer container"> 
+     <!--Контакты -->
+        <h2 class="footer__title-contact">Контакты</h2>
+        <a class="footer__mail" href="mailto:bastrakova.aleksandru@mail.ru">Свяжитесь с нами по электронной почте:</a>
+        <h3 class="team"> Бастракова А. и Бастракова Е.</h3>
+        <p class="footer_copy"> &copy; Recipes 2024 </p>
+    <!--/Контакты -->
+    <!--/Подвал -->
     </footer>
 </body>
 </html>
