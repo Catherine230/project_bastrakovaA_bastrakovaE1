@@ -7,16 +7,19 @@
 </head>
 <body>
      <!-- Заголовок -->
-    <header class="header">
+    <header class="header container">
         <!-- Логотип -->
         <a class="header__logo">
-            <img class="header__logo-icon" src="images/logo sam.png" alt="Логотип" width="50" height="50"> <p ALIGN = "center"><h1 class="centered-text"> Туризм, название</h1></p>
+            <img class="header__logo-icon" src="images/logo_sam.png" alt="Логотип" width="50" height="50">
+            <p class="centered-text">Туризм по России</p>
         </a>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/style.css">
             <!--/ Логотип -->
 
         <!-- Язык -->
-        <div class="container">
-            <select class="container__languageSelect">
+        <div class="language">
+            <select class="languageSelect button button--accent">
                 <option value="ru">Русский</option>
                 <option value="en">English</option>
             </select>
@@ -25,18 +28,18 @@
 
         <!--Форма поиска -->
         <form class="search" action="/" method="get">
-            <img class="search__icon"src="images/poisk roz.png" alt="Логотип" width="30" height="30">
-            <input class="search__text" type="search" name="text" placeholder="Поиск по сайту">
-            <input  class="search__poisk" type="submit" value="Поиск">
+            <img class="search__icon" src="images/Search_pink.png" alt="Логотип" width="30" height="30">
+            <input class="search__text button" type="search" name="text" placeholder="Поиск по сайту">
+            <button  class="search__poisk button button--accent" type="submit" value="Поиск"> Поиск </button>
         </form>
         <!--/Форма поиска -->
         <!-- Навигация -->
         <nav class="header__nav">
             <ul class=" header__list">
                 <li class="header__item"><a class="header__item-link header__item-link--active">Главная</a></li>    
-                <li class="header__item"><a class="header__item-link" href="#tipturisma">Тип туризма</a></li>
+                <li class="header__item"><a class="header__item-link" href="#type_of_tourism">Тип туризма</a></li>
                 <li class="header__item"><a class="header__item-link" href="#destinations">Направления</a> </li> 
-                <li class="header__item"><a class="header__item-link" href="#sobytia">События</a></li>
+                <li class="header__item"><a class="header__item-link" href="#events">События</a></li>
                 <li class="header__item"><a class="header__item-link" href="#about">О нас</a></li> 
             </ul>
         </nav>
@@ -45,22 +48,22 @@
     </header>
     <!--/ Заголовок -->
     <!--Основной контент -->
-    <main class="container">
+    <main class="main container">
         <!--Первый экран -->
-        <h1 class="container__title">Добро пожаловать в мир туризма!</h1>
+        <h1 class="main__title">Добро пожаловать в мир туризма!</h1>
         <section class="section__item-about">
            <div class="promo__content">
                 <h2 class="promo__title section__title">О нас</h2>
                 <p class="promo__description">Если вы любите путешествовать, то наш сайт вам точно поможет узнать Россию с туристической стороны.</p>
             </div>
-        <img class="promo__img" src="images/promo.jpg" alt="Фото красот" width="500" height="200"></img>
+        <img class="promo__img" src="images/promo.jpg" alt="Фото красот" width="500" height="200">
         </section>
          <!--/Первый экран -->
          <!--Виды туризма -->
         <section class= "section__tipturisma">
             <h2 class="section__title">Виды туризма</h2>
             <div class="section__all"> 
-                <img class="arrows__img" src="images/strelka 2.png" alt="Стрелка" width="25" height="25">
+                <img class="arrows__img" src="images/strelka_2.png" alt="Стрелка" width="25" height="25">
                 <img class="arows__img" src="images/strelka.png" alt="Стрелка" width="25" height="25">
             </div>
             <ul class="cards__tur">
@@ -70,12 +73,12 @@
                         <p class="card__description">Описание</p>
                     </li>
                     <li class="card__nature">
-                        <img class="card__img" src="images/By the wonders of nature.jpg" alt="По чудесам природы" width="100" height="150">
+                        <img class="card__img" src="images/By_the_wonders_of_nature.jpg" alt="По чудесам природы" width="100" height="150">
                         <h3 class="card__title">По чудесам природы</h3>
                         <p class="card__description" >Описание</p>
                     </li>
                     <li class="card__family"> 
-                        <img class="card__img" src="images/Family holidays.jpg" alt="Семейный отдых" width="100" height="150">
+                        <img class="card__img" src="images/Family_holidays.jpg" alt="Семейный отдых" width="100" height="150">
                         <h3 class="card__title">Семейный отдых</h3>
                         <p class="card__description">Описание</p>
                     </li>
@@ -85,12 +88,12 @@
                         <p class="card__description">Описание</p>
                     </li>
                     <li class="card__culture">
-                        <img class="card__img" src="images/Cultural and gastronomic tours.jpg" alt="Культурные и гастрономические туры" width="100" height="150">
+                        <img class="card__img" src="images/Cultural_and_gastronomic_tours.jpg" alt="Культурные и гастрономические туры" width="100" height="150">
                         <h3 class="card__title">Культурные и гастрономические туры</h3>
                         <p class="card__description">Описание</p>
                     </li>
                     <li class="card__health">
-                        <img class="card__img" src="images/Wellness trips.jpg" alt="Оздоровительные поездки" width="100" height="150">
+                        <img class="card__img" src="images/Wellness_trips.jpg" alt="Оздоровительные поездки" width="100" height="150">
                         <h3 class="card__title">Оздоровительные поездки</h3>
                         <p class="card__description">Описание</p>
                     </li>
@@ -101,7 +104,7 @@
          <section class= "section__napravlenia">
             <h2 class="section__title">Популярные направления</h2>
             <div class="section__all"> 
-                <img class="arrows__img" src="images/strelka 2.png" alt="Стрелка" width="25" height="25">
+                <img class="arrows__img" src="images/strelka_2.png" alt="Стрелка" width="25" height="25">
                 <img class="arows__img" src="images/strelka.png" alt="Стрелка" width="25" height="25">
             </div>
             <ul class="cards__nap">
@@ -131,7 +134,7 @@
                         <p class="card__description">Описание</p>
                     </li>
                     <li class="card__DE">
-                        <img class="card__img-nap" src="images/Far East.jpg" alt="Дальний-Восток" width="100" height="100">
+                        <img class="card__img-nap" src="images/Far_East.jpg" alt="Дальний-Восток" width="100" height="100">
                         <h3 class="card__title">Дальний-Восток</h3>
                         <p class="card__description">Описание</p>
                     </li>
@@ -148,41 +151,36 @@
         <section class= "section__events">
             <h2 class="section__title">Исследуйте по-другому</h2>
             <div class="section__all"> 
-                <img class="arrows__img" src="images/strelka 2.png" alt="Стрелка" width="25" height="25">
+                <img class="arrows__img" src="images/strelka_2.png" alt="Стрелка" width="25" height="25">
                 <img class="arows__img" src="images/strelka.png" alt="Стрелка" width="25" height="25">
             </div>
-            <div class="card_sobytia">
+            <ul class="card_events">
                 <li class="card__NY">
-                    <img class="card__img-sob" src="images/NewYear Moscow.jpg" alt="Новый год в..." width="100" height="150">
+                    <img class="card__img-events" src="images/NewYear_Moscow.jpg" alt="Новый год в..." width="100" height="150">
                     <h3 class="card__title">Новый год в Москве</h3>
                     <p class="card__description">Куда сходить туристу в новогодние каникулы</p>
                 </li>
                 <li class="card__auto">
-                    <img class="card__img-sob" src="images/auto.jpg" alt="Название" width="100" height="150">
+                    <img class="card__img-events" src="images/auto.jpg" alt="Автотуризм" width="100" height="150">
                     <h3 class="card__title">Автотуризм</h3>
                     <p class="card__description">По России на машине</p>
                 </li>
                 <li class="card__cruise">
-                    <img class="card__img-sob" src="images/cruise.jpg" alt="Название" width="150" height="100">
+                    <img class="card__img-events" src="images/cruise.jpg" alt="Круиз" width="150" height="100">
                     <h3 class="card__title">Круиз</h3>
                     <p class="card__description">Маршруты круизов по России</p>
                 </li>
-            </div>
+            </ul>
         </section>
         <!--/События -->
-       
-
-        <section class="section__up">
-            <a class="section__up-icon" href= >Наверх</a>
-        </section>
     </main>
      <!--Подвал -->
     <footer class="footer container"> 
      <!--Контакты -->
         <h2 class="footer__title-contact">Контакты</h2>
         <a class="footer__mail" href="mailto:bastrakova.aleksandru@mail.ru">Свяжитесь с нами по электронной почте:</a>
-        <h3 class="team"> Бастракова А. и Бастракова Е.</h3>
-        <p class="footer_copy"> &copy; Recipes 2024 </p>
+        <h3 class="footer__team"> Бастракова А. и Бастракова Е.</h3>
+        <p class="footer__copy"> &copy; Recipes 2025 </p>
     <!--/Контакты -->
     <!--/Подвал -->
     </footer>

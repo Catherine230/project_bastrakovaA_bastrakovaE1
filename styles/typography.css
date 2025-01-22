@@ -1,0 +1,41 @@
+/* Контейнер-обертка */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+/* Заголовки */
+.centered-text {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 91.0px;
+    color: #921049; 
+}
+/* Кнопки */
+.button {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #8b1045;
+
+    border: 1px solid #8b1045 ;
+    border-radius: 16px;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.button--accent {
+    color: #ffffff;
+
+    background-color: #921049;
+}
+
+.button--link {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 8px;
+
+    border: none;
+    background-color: transparent;
+}
+
