@@ -1,3 +1,10 @@
+
 .footer {
-    background-color: rgb(226, 160, 160);
+    background-color: #921049; /* Цвет фона подвала */
+    color: #fff; /* Цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    border-top: 1px solid #fff; /* Граница сверху */
+    width: 100%; /* Ширина на весь экран */
+    flex-shrink: 0; /* Запрещаем сжатие подвала */
 }

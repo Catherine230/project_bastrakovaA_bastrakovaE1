@@ -1,0 +1,10 @@
+.section__all {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    align-items: center; /* Выравнивание по вертикали по центру */
+    gap: 10px; /* Расстояние между изображениями */
+}
+
+.arrows--img {
+    display: block; /* Убедимся, что изображения отображаются как блоки */
+}

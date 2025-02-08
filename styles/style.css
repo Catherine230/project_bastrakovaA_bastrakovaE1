@@ -10,3 +10,5 @@
 @import "footer.css";
 /*стили относящиеся к main  */
 @import "main.css";
+/*стиль для стрелок*/
+@import "arrows.css";
