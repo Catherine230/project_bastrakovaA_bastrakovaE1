@@ -1,0 +1,63 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%; /* Высота на весь экран */
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в колонку */
+    background-color: #f0f0f0; /* Фон для наглядности */
+    font-family: 'CircularStd', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    color: black;
+    overflow-x: hidden;
+}
+
+/* Шапка сайта */
+header {
+    width: 100%; /* Ширина на весь экран */
+    background-color: #921049; /* Цвет фона шапки */
+    padding: 20px; /* Внутренние отступы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для шапки */
+    top: 0; /* Прижимаем к верхнему краю */
+    z-index: 1000; /* Убедимся, что шапка поверх других элементов */
+}
+
+/* Основной контент */
+main {
+    flex: 1; /* Занимает всё доступное пространство */
+    padding-top: 0px; /* Отступ сверху, равный высоте шапки */
+    max-width: 1400px; /* Максимальная ширина контейнера */
+    width: 100%; /* Занимает всю доступную ширину */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    padding: 10px;
+    background-color: #fff; /* Фон контейнера */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для наглядности */
+}
+
+/* Изображения */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Скрытые элементы */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
