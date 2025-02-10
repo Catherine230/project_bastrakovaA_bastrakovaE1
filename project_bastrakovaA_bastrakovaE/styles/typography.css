@@ -8,15 +8,13 @@
     font-size: 50px;
     font-weight: 700;
     line-height: normal;
-    color: #921049;
+    color: #9210489A;
 }
 .logo {
     font-size: 24px;
     font-weight: 600;
     line-height: 28px;
-    color: #921049;
-
-    border: 1px solid #921049;
+    color: #9210489A;
     border-radius: 16px;
     background-color: transparent;
 
@@ -40,7 +38,7 @@
 .button--accent {
     color: #ffffff;
 
-    background-color: #921049;
+    background-color: #9210489A;
 }
 
 .button--link {

@@ -13,7 +13,7 @@
 
 .arrows__button {
     background-color: white;   /* фоновый цвет кнопки */
-    border-color: #921049;   /* цвет рамки кнопки */
+    border-color: #9210489a;   /* цвет рамки кнопки */
     cursor: pointer;           /* Указатель при наведении */
     margin: 0 10px;           /* Отступы между кнопками */
     cursor: pointer;

@@ -7,7 +7,7 @@
 </head>
 <body>
      <!-- Заголовок -->
-    <header class="header__container">
+     <header class="header container header__background">
         <!-- Логотип -->
         <a class="header__logo logo">
             <img class="header__logo-icon" src="images/logo_sam.png" alt="Логотип" width="50" height="50">
@@ -15,8 +15,8 @@
         </a>
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/style.css">
-            <!--/ Логотип -->
-
+        <!--/ Логотип -->
+    
         <!-- Язык -->
         <div class="language">
             <select class="languageSelect button button--accent">
@@ -25,26 +25,28 @@
             </select>
         </div>
         <!--/ Язык -->
-
+    
         <!--Форма поиска -->
         <section class="section search">
             <form class="search__form form" action="/" method="get">
                 <img class="search__form-icon" src="images/Search_pink.png" alt="Логотип" width="30" height="30">
                 <input class="search__form-name form__field" type="search" name="text" placeholder="Поиск по сайту">
-                <button  class="search__form-submit button button--accent" type="submit" value="Поиск"> Поиск </button>
+                <button class="search__form-submit button button--accent" type="submit" value="Поиск"> Поиск </button>
             </form>
-         </section>
+        </section>
         <!--/Форма поиска -->
         <!-- Навигация -->
         <nav class="header__nav">
-            <ul class=" header__list">
-                <li class="header__item"><a class="header__item-link header__item-link--active">Главная</a></li>    
+            <ul class="header__list">
+                <li class="header__item"><a class="header__item-link header__item-link--active">Главная</a></li>
                 <li class="header__item"><a class="header__item-link" href="#type_of_tourism">Тип туризма</a></li>
-                <li class="header__item"><a class="header__item-link" href="#destinations">Направления</a> </li> 
+                <li class="header__item"><a class="header__item-link" href="#destinations">Направления</a> </li>
                 <li class="header__item"><a class="header__item-link" href="#events">События</a></li>
-                <li class="header__item"><a class="header__item-link" href="#about">О нас</a></li> 
+                <li class="header__item"><a class="header__item-link" href="#about">О нас</a></li>
             </ul>
         </nav>
+        <!--/ Навигация -->
+    </header>
         <!--/ Навигация -->
        
     </header>
@@ -54,16 +56,18 @@
         <!--Первый экран -->
         <h1 class="main__title">Добро пожаловать в мир туризма!</h1>
         <section class="section item-about">
-           <div class="promo content">
+            <div class="promo promo--img-container">
+                <img class="promo--img" src="images/promo.jpg" alt="Фото красот">
+            </div>
+            <div class="promo content">
                 <h2 class="promo__title section__title">О нас</h2>
                 <p class="promo__description">Если вы любите путешествовать, то наш сайт вам точно поможет узнать Россию с туристической стороны.</p>
             </div>
-        <img class="promo promo--img" src="images/promo.jpg" alt="Фото красот" width="500" height="200">
         </section>
          <!--/Первый экран -->
          <!--Виды туризма -->
         <section class= "section tipturisma">
-            <h2 class="section title">Виды туризма</h2>
+            <h2 class="section__title">Виды туризма</h2>
             <div class="navigation section__all">
                 <button class="arrows__button">
                     <img class="arrows arrows--img" src="images/strelka_2.png" alt="Назад" width="40" height="40">
