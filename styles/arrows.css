@@ -1,10 +1,30 @@
-.section__all {
-    display: flex;
-    justify-content: flex-end; /* Выравнивание по правому краю */
-    align-items: center; /* Выравнивание по вертикали по центру */
-    gap: 10px; /* Расстояние между изображениями */
+.section.title {
+    font-size: 24px; 
+    margin: -10px -50%;   /* Отступы сверху и снизу */
+    text-align: center; /* Выравнивание текста по центру */
 }
 
-.arrows--img {
-    display: block; /* Убедимся, что изображения отображаются как блоки */
+.navigation.section__all {
+    display: flex;             /* Использование flexbox для выравнивания */
+    justify-content: right;   /* Центрирование кнопок по горизонтали */
+    align-items: right;       /* Выравнивание кнопок по вертикали */
+    margin-bottom: 30px;       /* Отступ снизу перед другим блоком */
+}
+
+.arrows__button {
+    background-color: white;   /* фоновый цвет кнопки */
+    border-color: #9210489a;   /* цвет рамки кнопки */
+    cursor: pointer;           /* Указатель при наведении */
+    margin: 0 10px;           /* Отступы между кнопками */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.arrows__button:hover {
+    background-color: #f0f0f0;
+}
+
+.arrows__button img {
+    width: 30px;              /* Ширина изображения стрелки */
+    height: 30px;             /* Высота изображения стрелки */
 }

@@ -12,3 +12,5 @@
 @import "main.css";
 /*стиль для стрелок*/
 @import "arrows.css";
+/*адаптация*/
+@import "adaptability.css";

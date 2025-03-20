@@ -1,13 +1,26 @@
+/* Шапка сайта */
+.header {
+    width: 100%; /* Ширина на весь экран */
+    background-color: #9210489a; /* Цвет фона шапки */
+    padding: 10px; /* Внутренние отступы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для шапки */
+    top: 0; /* Прижимаем к верхнему краю */
+    z-index: 1000; /* Убедимся, что шапка поверх других элементов */
+    position: fixed; /* Фиксируем хедер на экране */
+    
+}
+
 /* Основные стили для header */
-.header__container {
+.header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #921049;
+    background-color: #9210489a;
     color: white;
 }
+
 
 /* Логотип и название */
 .header__logo {
@@ -46,7 +59,7 @@
 
 .search__form-name {
     padding: 5px;
-    border: 1px solid #921049;
+    border: 1px solid #9210489a;
     background-color: white;
     border-radius: 5px;
     margin-right: 10px;
@@ -55,10 +68,11 @@
 .search__form-submit {
     padding: 5px 10px;
     background-color: white;
-    color: #921049;
+    color: #9210489a;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .search__form-submit:hover {
@@ -73,13 +87,14 @@
 .languageSelect {
     padding: 5px;
     background-color: white;
-    color: #921049;
+    color: #9210489a;
     border: none;
     border-radius: 1.5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 .languageSelect:hover {
-    background-color: #7a0d3a; /* Темнее цвет при наведении */
+    background-color: #f0f0f0; /* Темнее цвет при наведении */
 }
 
 /* Навигация */
@@ -109,6 +124,7 @@
 .header__item-link--active {
     font-weight: bold;
     color: white;
+    transition: background-color 0.5s;
 }
 
 .header__item-link:hover {

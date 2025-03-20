@@ -1,6 +1,13 @@
-/* Основные стили для main */
+/* Основной контент */
 .main {
-    margin-top: 0px; /* Отступ сверху, чтобы контент начинался после шапки */
+    flex: 1; /* Занимает всё доступное пространство */
+    padding-top: 0px; /* Отступ сверху, равный высоте шапки */
+    max-width: 1400px; /* Максимальная ширина контейнера */
+    width: 100%; /* Занимает всю доступную ширину */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    background-color: #ffc2dc94; /* Фон контейнера */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для наглядности */
+    margin-top: 150px; /* Отступ сверху, чтобы контент начинался после шапки */
     padding: 20px;
     max-width: 1200px; /* Ограничение ширины контента */
     margin-left: auto;
@@ -12,7 +19,7 @@
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #640531;
 }
 
 /* Стили для секций */
@@ -24,129 +31,145 @@
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #640531;
 }
 
 /* Стили для карточек */
+/* Основные стили для контейнера карточек */
 .cards {
     display: flex;
-    flex-wrap: wrap; /* Карточки будут переноситься на новую строку */
-    gap: 20px; /* Расстояние между карточками */
-    justify-content: flex-start; /* Карточки выравниваются слева */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+    scroll-behavior: smooth;
 }
 
+/* Стили для карточки */
 .card {
-    flex: 1 1 calc(33.333% - 40px); /* Три карточки в строке с учетом отступов */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    flex: 0 0 calc(33.333% - 20px); /* 3 карточки в ряд */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     overflow: hidden;
-    background-color: #fff;
-    transition: transform 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    background: #fff;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Эффект при наведении */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card__img,
-.card__img-nap,
-.card__img-events {
-    width: 100%; /* Фотографии занимают всю ширину карточки */
-    height: 450px; /* Фиксированная высота для фотографий */
-    object-fit: cover; /* Сохраняем пропорции изображения */
+.card__img, 
+.card__img-events,
+.card__img-nap {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
 .card__title {
-    font-size: 1.2rem;
     text-align: center;
     margin: 10px 0;
+    font-size: 18px;
     color: #333;
+}
+
+.card__short-description {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .card__description {
-    font-size: 0.9rem; /* Уменьшенный размер текста */
-    text-align: center;
-    padding: 0 10px 10px;
-    color: #333;
-    line-height: 1.4;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    display: none; /* Скрываем подробное описание по умолчанию */
 }
 
-/* Стили для стрелок */
-.arrows {
-    cursor: pointer;
-    margin: 0 10px;
+/* Стили для открытой карточки */
+.card.open {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    width: 80%;
+    max-width: 800px;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Стили для секции "О нас" */
-.item-about {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 40px;
+.card.open .card__description {
+    display: block; /* Показываем подробное описание при открытии */
 }
 
-.promo {
-    flex: 1;
+.card.open .card__short-description {
+    display: none; /* Скрываем краткое описание при открытии */
 }
 
-.promo__title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
+
+
+/* Затемнение фона при открытии карточки */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
-.promo__description {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.5;
+.overlay.active {
+    display: block;
 }
 
-.promo--img {
-    width: 50%; /* Уменьшаем ширину изображения */
-    height: auto;
-    border-radius: 8px;
-}
-
+/* Стили для первого экрана (promo) */
 /* Стили для первого экрана (promo) */
 .item-about {
     position: relative; /* Для позиционирования текста поверх изображения */
     width: 100%; /* На всю ширину экрана */
-    height: 400px; /* Высота секции */
-    overflow: hidden; /* Скрываем всё, что выходит за пределы */
+    height: auto; /* Высота секции будет зависеть от содержимого */
     display: flex;
+    flex-direction: column; /* Страница содержит вертикальную структуру */
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff; /* Белый цвет текста */
 }
 
 .promo--img {
-    position: absolute; /* Позиционируем изображение абсолютно */
-    top: 0;
-    left: 0;
-    width: 100%; /* На всю ширину экрана */
-    height: 100%; /* На всю высоту секции */
+    width: 100%; /* На всю ширину области */
+    height: auto; /* Высота будет адаптироваться для сохранения пропорций */
     object-fit: cover; /* Сохраняем пропорции изображения */
-    z-index: 1; /* Изображение на заднем плане */
 }
 
 .promo {
-    position: relative; /* Для позиционирования текста */
-    z-index: 2; /* Текст поверх изображения */
-    background-color: #921049; /* Полупрозрачный фон для текста */
+    position: relative; /* Для позиционирования текста под изображением */
+    background-color: #9210489a; /* Полупрозрачный фон для текста */
     padding: 20px;
     border-radius: 10px;
+    color: #fff; /* Белый цвет текста */
     max-width: 800px; /* Ограничение ширины текстового блока */
+    text-align: center; /* Центрируем текст */
+    margin-top: 20px; /* Отступ сверху для отделения от изображения */
 }
 
 .promo__title {
     font-size: 2.5rem; /* Большой размер заголовка */
-    margin-bottom: 20px;
-    color: #fff; /* Белый цвет текста */
+    margin-bottom: 20px; /* Отступ под заголовком */
+    color: #fff;
 }
 
 .promo__description {
     font-size: 1.2rem; /* Размер текста */
-    line-height: 1.6;
-    color: #fff; /* Белый цвет текста */
+    line-height: 1.6; /* Межстрочный интервал */
 }
