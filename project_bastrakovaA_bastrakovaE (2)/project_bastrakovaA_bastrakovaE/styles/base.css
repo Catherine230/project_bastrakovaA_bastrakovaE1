@@ -1,0 +1,42 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%; /* Высота на весь экран */
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в колонку */
+    background-color: #f0f0f0; /* Фон для наглядности */
+    font-family: 'CircularStd', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    color: black;
+    overflow-x: hidden;
+}
+
+
+/* Изображения */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Скрытые элементы */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

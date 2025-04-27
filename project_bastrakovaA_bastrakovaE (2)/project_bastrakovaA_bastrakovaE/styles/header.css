@@ -1,0 +1,133 @@
+/* Шапка сайта */
+.header {
+    width: 100%; /* Ширина на весь экран */
+    background-color: #9210489a; /* Цвет фона шапки */
+    padding: 10px; /* Внутренние отступы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для шапки */
+    top: 0; /* Прижимаем к верхнему краю */
+    z-index: 1000; /* Убедимся, что шапка поверх других элементов */
+    position: fixed; /* Фиксируем хедер на экране */
+    
+}
+
+/* Основные стили для header */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #9210489a;
+    color: white;
+}
+
+
+/* Логотип и название */
+.header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.centered-text{
+    color: white;
+}
+.header__logo-icon {
+    margin-right: 10px;
+}
+
+.centered-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Форма поиска */
+.search {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.search__form {
+    display: flex;
+    align-items: center;
+}
+
+.search__form-icon {
+    margin-right: 10px;
+}
+
+.search__form-name {
+    padding: 5px;
+    border: 1px solid #9210489a;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search__form-submit {
+    padding: 5px 10px;
+    background-color: white;
+    color: #9210489a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search__form-submit:hover {
+    background-color: #f0f0f0;
+}
+
+/* Выбор языка */
+.language {
+    margin-left: 500px;
+}
+
+.languageSelect {
+    padding: 5px;
+    background-color: white;
+    color: #9210489a;
+    border: none;
+    border-radius: 1.5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.languageSelect:hover {
+    background-color: #f0f0f0; /* Темнее цвет при наведении */
+}
+
+/* Навигация */
+.header__nav {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.header__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header__item {
+    margin: 0 15px;
+}
+
+.header__item-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.header__item-link--active {
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+.header__item-link:hover {
+    color: #9b698e;
+}
+

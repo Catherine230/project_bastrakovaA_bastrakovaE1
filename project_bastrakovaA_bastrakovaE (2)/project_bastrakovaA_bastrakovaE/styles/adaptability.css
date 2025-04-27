@@ -1,0 +1,112 @@
+@media (max-width: 1024px) {
+    /* Основные стили для header */
+    .header__container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    /* Логотип и название */
+    .header__logo {
+        margin-bottom: 10px;
+    }
+
+    .centered-text {
+        font-size: 1.2rem;
+    }
+
+    /* Форма поиска */
+    .search {
+        margin-left: 350px;
+        width: 50%;
+    }
+
+    .search__form {
+        width: 100%;
+    }
+
+    .search__form-name {
+        width: 70%;
+    }
+
+    /* Выбор языка */
+    .language {
+        margin-left: 600px;
+        margin-top: -45px;
+    }
+
+    /* Навигация */
+    .header__nav {
+        margin-top: 5px;
+    }
+
+    .header__list {
+        flex-direction: line;
+
+        align-items: flex-start;
+    }
+
+    .header__item {
+        margin: 0px 10px;
+    }
+
+    /* Основные стили для main */
+    .main {
+        padding: 10px;
+    }
+
+    .main__title {
+        font-size: 1.8rem;
+    }
+
+    /* Стили для секций */
+    .section__title {
+        font-size: 1.3rem;
+    }
+
+    .section {
+        margin-bottom: 20px;
+    }
+
+    /* Стили для карточек */
+    .cards {
+        gap: 10px;
+        scroll-behavior: smooth;
+
+    }
+
+    .card {
+        flex: 0 0 calc(50% - 20px);
+        margin-bottom: 10px;
+        width: 300px;
+    }
+
+    .card__img,
+    .card__img-nap,
+    .card__img-events {
+        height: 300px;
+    }
+
+    /* Стили для секции "О нас" */
+    .item-about {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .promo--img {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .promo {
+        padding: 10px;
+        max-width: 100%;
+    }
+    .section.title {
+        font-size: 24px; 
+        margin: -10px 20%;   /* Отступы сверху и снизу */
+        text-align: center; /* Выравнивание текста по центру */
+    }
+    
+}

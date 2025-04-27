@@ -1,0 +1,67 @@
+/* Стили для модального окна карточки */
+.card-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1000;
+    overflow: auto;
+  }
+  
+  .card-modal-content {
+    display: flex;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    animation: modalopen 0.5s;
+  }
+  
+  .card-modal-content > div:first-child {
+    flex: 0 0 40%;
+    padding-right: 20px;
+  }
+  
+  .card-modal-content > div:last-child {
+    flex: 1;
+  }
+  
+  .card-modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .card-modal h3 {
+    margin-top: 0;
+  }
+  
+  .card-modal .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  @keyframes modalopen {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 768px) {
+    .card-modal-content {
+      flex-direction: column;
+      max-width: 90%;
+    }
+    
+    .card-modal-content > div {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  }
